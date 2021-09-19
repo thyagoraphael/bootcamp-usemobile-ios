@@ -31,7 +31,7 @@
                             <color key="textColor" name="ColorTitle"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Responda 10 perguntas e veja sua pontuação no fim!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUb-xc-7yG">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua pontuação foi de:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUb-xc-7yG">
                             <rect key="frame" x="20" y="75" width="314" height="15"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                             <nil key="textColor"/>
@@ -49,6 +49,19 @@
                         <constraint firstItem="OFF-MB-obw" firstAttribute="leading" secondItem="zA8-ef-dqf" secondAttribute="leading" constant="30" id="wE8-19-wGL"/>
                     </constraints>
                 </view>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1M-be-hfh">
+                    <rect key="frame" x="0.0" y="33" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="Background"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" name="Background"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Perguntas e Respostas" id="tFh-N3-hK9"/>
+                    </items>
+                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="BackgroundHome"/>
@@ -62,6 +75,9 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="Background">
+            <color red="0.45882352941176469" green="0.5490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BackgroundHome">
             <color red="0.89803921568627454" green="0.9137254901960784" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
