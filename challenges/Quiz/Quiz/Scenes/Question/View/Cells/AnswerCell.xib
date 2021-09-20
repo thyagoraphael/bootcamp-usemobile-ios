@@ -47,7 +47,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="labelTitle" destination="MA8-Uv-U4z" id="Fgq-mQ-sc0"/>
+                <outlet property="labelName" destination="MA8-Uv-U4z" id="5Wl-Nt-4CP"/>
+                <outlet property="viewBackground" destination="A9n-Ad-LIw" id="DmE-zV-ASQ"/>
             </connections>
             <point key="canvasLocation" x="-45.652173913043484" y="100.78125"/>
         </tableViewCell>
