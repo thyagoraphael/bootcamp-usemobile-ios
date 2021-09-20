@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinishViewController" customModule="Quiz" customModuleProvider="target">
             <connections>
+                <outlet property="labelCoubtAnswer" destination="bfh-JY-SIO" id="9Xw-k2-CM3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewFinishQuiz" destination="zA8-ef-dqf" id="lWa-ky-Idf"/>
             </connections>
@@ -22,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zA8-ef-dqf">
-                    <rect key="frame" x="30" y="348" width="354" height="200"/>
+                    <rect key="frame" x="30" y="343" width="354" height="210"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perguntas e Respostas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFF-MB-obw">
                             <rect key="frame" x="30" y="20" width="294" height="30"/>
@@ -37,31 +38,38 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/10 Acertos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfh-JY-SIO">
+                            <rect key="frame" x="108.5" y="110" width="137.5" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7I-cs-llh">
+                            <rect key="frame" x="111" y="160" width="132" height="30"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Tentar novamente">
+                                <color key="titleColor" red="0.45882352941176469" green="0.5490196078431373" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="handlerButtonRetry:" destination="-1" eventType="touchUpInside" id="LMw-nP-sou"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="UUb-xc-7yG" firstAttribute="top" secondItem="OFF-MB-obw" secondAttribute="bottom" constant="25" id="3rv-wf-OmV"/>
                         <constraint firstAttribute="trailing" secondItem="UUb-xc-7yG" secondAttribute="trailing" constant="20" id="8Ic-g8-jZE"/>
-                        <constraint firstAttribute="height" constant="200" id="F79-vp-c1p"/>
+                        <constraint firstItem="a7I-cs-llh" firstAttribute="centerX" secondItem="zA8-ef-dqf" secondAttribute="centerX" id="CtD-jA-UBC"/>
+                        <constraint firstItem="bfh-JY-SIO" firstAttribute="centerX" secondItem="zA8-ef-dqf" secondAttribute="centerX" id="E9g-PL-uXW"/>
                         <constraint firstItem="OFF-MB-obw" firstAttribute="top" secondItem="zA8-ef-dqf" secondAttribute="top" constant="20" id="XSy-WW-4T7"/>
                         <constraint firstItem="UUb-xc-7yG" firstAttribute="leading" secondItem="zA8-ef-dqf" secondAttribute="leading" constant="20" id="XzJ-mA-F5T"/>
+                        <constraint firstItem="a7I-cs-llh" firstAttribute="top" secondItem="bfh-JY-SIO" secondAttribute="bottom" constant="20" id="bXA-DG-gFC"/>
                         <constraint firstAttribute="trailing" secondItem="OFF-MB-obw" secondAttribute="trailing" constant="30" id="bl4-KL-lA8"/>
+                        <constraint firstItem="bfh-JY-SIO" firstAttribute="top" secondItem="UUb-xc-7yG" secondAttribute="bottom" constant="20" id="dNx-NS-ypS"/>
                         <constraint firstItem="OFF-MB-obw" firstAttribute="leading" secondItem="zA8-ef-dqf" secondAttribute="leading" constant="30" id="wE8-19-wGL"/>
+                        <constraint firstAttribute="bottom" secondItem="a7I-cs-llh" secondAttribute="bottom" constant="20" id="xQM-pj-KjZ"/>
                     </constraints>
                 </view>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1M-be-hfh">
-                    <rect key="frame" x="0.0" y="33" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" name="Background"/>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="barTintColor" name="Background"/>
-                    <textAttributes key="titleTextAttributes">
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </textAttributes>
-                    <items>
-                        <navigationItem title="Perguntas e Respostas" id="tFh-N3-hK9"/>
-                    </items>
-                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="BackgroundHome"/>
@@ -75,9 +83,6 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="Background">
-            <color red="0.45882352941176469" green="0.5490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="BackgroundHome">
             <color red="0.89803921568627454" green="0.9137254901960784" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

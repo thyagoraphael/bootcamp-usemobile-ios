@@ -9,6 +9,7 @@ import Foundation
 
 struct QuestionModel {
     let title: String
-    let answer: [AnswerModel]
+    var answer: [AnswerModel]
     let answerCorrect: Int
+    var isAnswer: Bool = false
 }

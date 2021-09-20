@@ -16,5 +16,5 @@ struct AnswerModel {
     }
     
     let name: String
-    let style: Style
+    var style: Style
 }
