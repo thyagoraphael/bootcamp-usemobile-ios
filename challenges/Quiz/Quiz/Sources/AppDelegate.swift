@@ -16,11 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let viewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        /* Set Colors navigationController */
+        UINavigationBar.appearance().barTintColor = UIColor(red: 117.0/255.0, green: 140.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().isTranslucent = false
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController.navigationBar.tintColor = UIColor.white
+        
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = viewController
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true
-    }    
+    }
 }
 
